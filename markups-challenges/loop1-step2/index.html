@@ -7,6 +7,7 @@
     <title>Loop 1 Step 2</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,17 +19,20 @@
             </div>
             <h1>PAYMENT METHOD</h1>
         </div>
-        <div class="payment-method">
+        <div class="payment-method" onclick="select('visa', 'mastercard', 'maestro')">
             <img src="./img/visa.svg" alt="method-logo">
-            <p>VISA</p>
+            <p id="visaText">VISA</p>
+            <img src="img/check.svg" alt="icon-selected" class="ic-selected" id="visa">
         </div>
-        <div class="payment-method">
+        <div class="payment-method" onclick="select('mastercard', 'visa', 'maestro')">
             <img src="./img/mastercard.svg" alt="method-logo">
-            <p>MASTERCARD</p>
+            <p id="mastercardText">MASTERCARD</p>
+            <img src="img/check.svg" alt="icon-selected" class="ic-selected" id="mastercard">
         </div>
-        <div class="payment-method">
+        <div class="payment-method" onclick="select('maestro', 'visa', 'mastercard')">
             <img src="./img/maestro.svg" alt="method-logo">
-            <p>MAESTRO</p>
+            <p id="maestroText">MAESTRO</p>
+            <img src="img/check.svg" alt="icon-selected" class="ic-selected" id="maestro">
         </div>
         <form action="#">
             <button>

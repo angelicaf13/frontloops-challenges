@@ -7,6 +7,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     background-image: url('./img/background.jpg');
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +47,7 @@ h1{
 .payment-method{
     display: flex;
     align-items: center;
+    position: relative;
     border-top: 2px solid #D7D7D7;
     padding: 20px 40px;
     color: #aaa;
@@ -75,13 +77,32 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s;
+    transition: background 0.2s;
 }
 
 button:hover{
     background: #4B83F1;
 }
 
+button:active{
+    border-top: white solid 5px;
+}
+
 button img{
     width:28px;
+}
+
+.ic-selected{
+    position: absolute;
+    right: 0;
+    height: 28px;
+    display: none;
+}
+
+.text-selected{
+    color: black;
+}
+
+.selected{
+    display: block;
 }
